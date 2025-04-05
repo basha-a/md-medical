@@ -1,0 +1,106 @@
+.left img{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-height: 350px;
+}
+@media (max-width: 576px) {
+    .left img{
+        
+        max-height: 200px;
+    }
+}
+
+
+/* top brands---------------------------------------------------- */
+.logos img{
+    width: 15%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+
+}
+.logos img:hover{
+    transform: translateY(-15px);
+}
+
+/* couresol --------------------------------------------------- */
+.carousel-inner {
+    height: 88vh;
+}
+
+.carousel-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Adjust height for smaller screens */
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-inner {
+        height: 40vh;
+    }
+}
+
+/* navbar  */
+
+.navbar-nav{
+    margin-left: 900px; 
+}
+@media (max-width: 576px) {
+    .navbar-nav{
+        
+        margin-left: 0px; 
+    }
+}
+
+.h1{
+    font-size: 50px; 
+    font-weight: 700; 
+    position: absolute; 
+    color: white; 
+    top: 200px; 
+    left: 450px;
+}
+.hero-title {
+    position: absolute;
+    font-size: 3.5rem; /* Large & bold */
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(45deg, #00d10a, #3336ff); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); */
+    letter-spacing: 2px;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+    top: 20%;
+    left: 20%;
+
+
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem; /* Slightly smaller for mobile */
+        top: 0px; 
+        left: 0px;
+    }
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

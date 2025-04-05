@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- nav bar  -->
+ <nav class="navbar navbar-expand-lg bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img style="height: 50px; border-radius: 50%;" src="md-logo.jpeg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active fw-semibold" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link fw-semibold" href="product.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link fw-semibold" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link fw-semibold" href="contact.html">Contact Us</a>
+          </li>
+      
+        </ul>
+
+      </div>
+    </div>
+</nav>
+  <!-- End Navbar -->
+  
+    <!-- Hero Section -->
+<section class="contact-hero d-flex align-items-center text-center text-white">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Reach out to us anytime.</p>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="container my-5">
+    <div class="row text-center text-md-start gap-4 justify-content-center">
+        <div class="col-md-3 d-flex flex-column align-items-center p-4 shadow rounded">
+            <i class="bi bi-geo-alt fs-1 text-danger"></i>
+            <h5 class="mt-3">Our Address</h5>
+            <p class="text-center">No 4, Lggs Nagar, New Bustand(opp), Thiruvannamalai - 606 601</p>
+        </div>
+        <div class="col-md-3 d-flex flex-column align-items-center p-4 shadow rounded">
+            <i class="bi bi-telephone fs-1 text-success"></i>
+            <h5 class="mt-3">Call Us</h5>
+            <p>+91 73394 74647</p>
+        </div>
+        <div class="col-md-3 d-flex flex-column align-items-center p-4 shadow rounded">
+            <i class="bi bi-envelope fs-1 text-primary"></i>
+            <h5 class="mt-3">Email Us</h5>
+            <p>mdmedicalagencies31@gmail.com</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card p-4 shadow">
+                <h3 class="text-center">Get in Touch</h3>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="4" placeholder="Write your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Google Map Embed -->
+<section class="container my-5">
+    <h3 class="text-center">Find Us on Google Maps</h3>
+    <div class="map-container mt-3">
+        <iframe class="w-100 rounded shadow" height="400"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15596.494066769337!2d79.0538144554199!3d12.239915099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bacc1007a7707bf%3A0x2faf12bf389c0b43!2sMd%20siddha%20ayurveda%20medical%20agencies!5e0!3m2!1sen!2sin!4v1743836603841!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy"></iframe>
+
+
+    </div>
+</section>
+
+<!-- CSS Styling -->
+<style>
+    /* Hero Section */
+    .contact-hero {
+        height: 50vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                    url('https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045_1280.png') center/cover;
+    }
+
+    /* Icon Styling */
+    .bi {
+        transition: transform 0.3s ease-in-out;
+    }
+    .bi:hover {
+        transform: scale(1.1);
+    }
+
+    /* Google Map Styling */
+    .map-container iframe {
+        border: none;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .contact-hero {
+            height: 40vh;
+        }
+    }
+</style>
+
+<!-- footer  -->
+<footer class="bg-dark text-light pt-4">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Column 1: Company Info -->
+            <div class="col-md-4 mb-3">
+                <h5>MD Medical Agencies</h5>
+                <p>Trusted Wholesale & Retail Supplier of Siddha, Ayurveda & Unani Medicines.</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                    <li><a href="product.html" class="text-light text-decoration-none">Products</a></li>
+                    <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="col-md-4 mb-3">
+                <h5>Contact Us</h5>
+                <p><i class="bi bi-geo-alt-fill"></i> No 4, Lggs Nagar, New Bustand(opp), Thiruvannamalai - 606 601</p>
+                <p><i class="bi bi-telephone-fill"></i> +91 73394 74647</p>
+                <p><i class="bi bi-envelope-fill"></i> mdmedicalagencies31@gmail.com</p>
+                <!-- Social Icons -->
+                <div>
+                    <a href="#" class="text-light me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="bg-success text-center py-2 mt-3">
+        <p class="mb-0">© 2025 MD Medical Agencies. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Font Awesome (For Icons) -->
+<script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+
+
+  <!-- bootstrap script  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Bootstrap Icons (For Styling) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+
+</body>
+</html>
