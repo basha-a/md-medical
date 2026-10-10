@@ -12,6 +12,28 @@
         window.addEventListener("scroll", onScroll, { passive: true });
     }
 
+    // Hero: gentle mouse parallax on desktop (skipped for touch and reduced motion)
+    var parallax = document.querySelector("[data-parallax]");
+    if (parallax && window.matchMedia("(pointer: fine) and (prefers-reduced-motion: no-preference)").matches) {
+        var layers = parallax.querySelectorAll("[data-depth]");
+        var hero = parallax.closest("section") || parallax;
+        var frame = null;
+        var move = function (x, y) {
+            layers.forEach(function (layer) {
+                var depth = parseFloat(layer.getAttribute("data-depth"));
+                layer.style.translate = (x * depth).toFixed(1) + "px " + (y * depth).toFixed(1) + "px";
+            });
+        };
+        hero.addEventListener("pointermove", function (e) {
+            var rect = hero.getBoundingClientRect();
+            var x = (e.clientX - rect.left) / rect.width - 0.5;
+            var y = (e.clientY - rect.top) / rect.height - 0.5;
+            if (frame) cancelAnimationFrame(frame);
+            frame = requestAnimationFrame(function () { move(x, y); });
+        });
+        hero.addEventListener("pointerleave", function () { move(0, 0); });
+    }
+
     // Reveal-on-scroll animations
     var revealEls = document.querySelectorAll("[data-reveal]");
     if ("IntersectionObserver" in window) {
